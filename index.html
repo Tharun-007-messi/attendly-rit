@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#741b2a" />
+    <title>Attendly — RIT Smart Attendance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="login-screen" class="login-shell">
+        <div class="brand-panel">
+          <a class="brand" href="#" aria-label="Attendly home"><span class="brand-mark">✓</span> Attendly <small>RIT</small></a>
+          <div class="hero-copy">
+            <p class="eyebrow">SMART CAMPUS ATTENDANCE</p>
+            <h1>Attendance that respects everyone’s time.</h1>
+            <p>Secure, location-verified attendance for Rajalakshmi Institute of Technology.</p>
+          </div>
+          <div class="feature-chips"><span>◉ GPS verified</span><span>◷ Real-time updates</span><span>▣ Private by design</span></div>
+        </div>
+        <div class="login-card-wrap">
+          <div class="login-card">
+            <p class="eyebrow teal">WELCOME BACK</p>
+            <h2>Sign in to Attendly</h2>
+            <p class="muted">Use the credentials issued by your college.</p>
+            <div class="role-tabs" role="tablist" aria-label="Account type">
+              <button class="role-tab active" data-role="student">Student</button>
+              <button class="role-tab" data-role="teacher">Teacher</button>
+              <button class="role-tab" data-role="admin">Admin</button>
+            </div>
+            <form id="login-form">
+              <label id="id-label" for="identity">Registration number</label>
+              <input id="identity" type="text" placeholder="e.g. 23CSE1042" required />
+              <label for="password">Password</label>
+              <div class="password-field"><input id="password" type="password" placeholder="Enter your password" required /><button type="button" id="show-password" aria-label="Show password">◉</button></div>
+              <div class="form-row"><label class="check"><input type="checkbox" /> Remember me</label><a href="#">Forgot password?</a></div>
+              <button class="primary full" type="submit">Sign in <span>→</span></button>
+            </form>
+            <p class="demo-note">Prototype mode — enter any details to explore.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <aside class="sidebar">
+          <a class="brand" href="#"><span class="brand-mark">✓</span> Attendly <small>RIT</small></a>
+          <nav id="main-nav" aria-label="Main navigation"></nav>
+          <div class="sidebar-footer"><div class="privacy"><span>⌖</span><div><strong>Location privacy</strong><small>Only checked when you mark attendance.</small></div></div><button id="sign-out" class="text-button">← Sign out</button></div>
+        </aside>
+        <section class="content">
+          <header class="topbar"><button id="menu-button" class="mobile-menu" aria-label="Open menu">☰</button><div><p class="eyebrow teal" id="page-kicker">STUDENT PORTAL</p><h2 id="page-title">Good morning, Aisha</h2></div><div class="top-actions"><button class="bell" aria-label="Notifications">♧<i></i></button><button class="avatar" aria-label="Profile">AS</button></div></header>
+          <div id="page-content"></div>
+        </section>
+      </section>
+    </main>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
